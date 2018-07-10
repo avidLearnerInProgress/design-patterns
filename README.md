@@ -2,7 +2,9 @@
 Pydesignpatterns
 ================
 
-## Trying to build python module to learn all design patterns on the go!
+## Trying to build python module to learn all design patterns on the go!  
+
+Work in progress..
 
 ### Todo
 
