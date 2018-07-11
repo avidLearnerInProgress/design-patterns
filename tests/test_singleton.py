@@ -1,3 +1,9 @@
+"""
+Author: CHIRAG SHAH
+Created On: 7th July 2018
+Modified On: 11th July 2018
+"""
+
 import unittest, sys, inspect
 from pathlib import Path
 
@@ -8,7 +14,8 @@ sys.path.append(ROOT_DIR)
 from pydesignpatterns.creational import (
 	singleton,
 	singleton_lazy_instantiation,
-	singleton_decorator
+	singleton_decorator,
+	singleton_thread
 )
 
 class TestSingleton(unittest.TestCase):
@@ -54,3 +61,23 @@ class TestSingletonDecorated(unittest.TestCase):
 
 	def test_instance_exception(self):
 		self.assertRaises(TypeError, lambda: singleton_decorator.VeniVediVici())
+
+class TestSingletonThreaded(unittest.TestCase):
+
+	def test_class(self):
+		self.assertEqual(inspect.isclass(singleton_thread.SingletonThread), True)
+
+	def test_instances(self):
+		print("\n")
+		s1 = singleton_thread.SingletonThread().get_instance()
+		s2 = singleton_thread.SingletonThread().get_instance()
+		self.assertEqual(s1, s2)
+
+	def test_threadsafe(self):
+		ts1 = singleton_thread.SingletonThread().get_instance().gettid()
+		ts2 = singleton_thread.SingletonThread().get_instance().gettid()
+		self.assertEqual(ts1, ts2)
+
+
+
+
