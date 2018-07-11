@@ -1,7 +1,12 @@
+"""
+Author: CHIRAG SHAH
+Created On: 7th July 2018
+Modified On: 10th July 2018
+"""
+
 from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.image as mimg
-
 
 def get_path():
 	P = str(Path().resolve().parent)
