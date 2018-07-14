@@ -13,6 +13,8 @@ from utility import class_diagram, output_image
 class SingletonDecorated(object):
 	"""
 	SingletonDecorated class is a naive implementation of Singleton pattern by using decorators
+	__init__: doesn't return anything; it's only responsible for initializing the instance after it's been created
+	__call__: this method is called when the instance is called, it allows to return arbitary values
 
 	@return-values: instance of class
 	"""
@@ -43,10 +45,11 @@ class VeniVediVici:
 		print("Veni Vedi Vici means `he came, he saw, he conquered`")
 
 
-#------------------Log------------------#
+#------------------Log Starts------------------#
 def wrapperaround():
 	#Using this function and nested class for sole purpose of get_code() function results
 	#@SingletonDecorated --> Uncomment this line to understand this decorated class
+
 	class VeniVediVici2:
 		"""
 		Using singleton decorator to wrap around functionalities of Singleton pattern for this class
@@ -92,5 +95,5 @@ def get_outputimage():
 	"""
 
 	output = output_image("singleton_decorated.png")
-	plt.show()
+	#plt.show()
 	return output

@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 7th July 2018
-Modified On: 11th July 2018
+Modified On: 14th July 2018
 """
 
 import unittest, sys, inspect
@@ -15,7 +15,8 @@ from pydesignpatterns.creational import (
 	singleton,
 	singleton_lazy_instantiation,
 	singleton_decorator,
-	singleton_thread
+	singleton_thread,
+	singleton_metaclass
 )
 
 class TestSingleton(unittest.TestCase):
@@ -78,6 +79,10 @@ class TestSingletonThreaded(unittest.TestCase):
 		ts2 = singleton_thread.SingletonThread().get_instance().gettid()
 		self.assertEqual(ts1, ts2)
 
+class TestSingletonMetaClass(unittest.TestCase):
 
+	def test_class(self):
+		self.assertEqual(inspect.isclass(singleton_metaclass.SingletonMetaclass), True)
 
-
+	def test_instances(self):
+		self.assertEqual(isinstance(singleton_metaclass.A, singleton_metaclass.SingletonMetaclass), isinstance(singleton_metaclass.B, singleton_metaclass.SingletonMetaclass))

@@ -13,7 +13,7 @@ from utility import class_diagram, output_image
 class Singleton(object):
 	"""
 	Singleton Class is a naive implementation of Singleton pattern by overriding __new__ method
-	__new__: First step of instance creation. It's called first, and is responsible for returning a new instance of your class.
+	__new__: First step of instance creation. It's called first, and is responsible for returning a new instance of your class
 
 	@return-values: instance of class, hash value generated for class
 	"""
@@ -29,7 +29,7 @@ class Singleton(object):
 
 def get_instance():
 	"""
-	Check if single instance is created for same class by using multiple objects.
+	Check if single instance is created for same class by using multiple objects
 	"""
 
 	s1, hsh1 = Singleton()
@@ -67,5 +67,5 @@ def get_outputimage():
 	"""
 
 	output = output_image("singleton.png")
-	plt.show()
+	#plt.show()
 	return output

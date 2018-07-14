@@ -14,6 +14,10 @@ from utility import class_diagram, output_image
 class SingletonThread(object):
 	"""
 	SingletonThread is thread-safe implementation of Singleton Pattern
+	__new__: First step of instance creation. It's called first, and is responsible for returning a new instance of your class
+	__init__: doesn't return anything; it's only responsible for initializing the instance after it's been created
+
+	@return-values: instance of class, thread-id operating on class
 	"""
 
 	__lockObj = thread.allocate_lock()  #lock object
@@ -44,8 +48,6 @@ class SingletonThread(object):
 				cls.__instance = object.__new__(cls)
 
 		finally:
-			
-			
 			cls.__lockObj.release()
 		#critical section end
 
@@ -86,7 +88,7 @@ def get_classdiagram():
 	"""
 
 	diagram = class_diagram("singleton.png")
-	plt.show()
+	#plt.show()
 	return diagram
 
 def get_outputimage():
@@ -95,7 +97,5 @@ def get_outputimage():
 	"""
 
 	output = output_image("singleton_thread.png")
-	plt.show()
+	#plt.show()
 	return output
-
-get_outputimage()

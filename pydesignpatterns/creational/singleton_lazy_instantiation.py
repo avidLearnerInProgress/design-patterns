@@ -14,8 +14,9 @@ class SingletonLazy(object):
 	"""
 	SingletonLazy Class is naive implementation of Singleton Pattern with help of lazy instantiation
 	Lazy instantiation: Object gets created only when its needed
-	__init__: doesn't return anything; it's only responsible for initializing the instance after it's been created.
-
+	__init__: doesn't return anything; it's only responsible for initializing the instance after it's been created
+	
+	@return-values: instance of class
 	"""
 
 	__instance = None
