@@ -2,15 +2,18 @@
 Pydesignpatterns
 ================
 
-## Trying to build python module to learn all design patterns on the go!  
-
-Work in progress..
+## Python module to learn all design patterns on the go!  
 
 ### Todo
 
 - [ ] Creational Design Patterns  
+  - [ ] Singleton Pattern
+    - [ ] Naive
+    - [ ] Lazy instantiation
+    - [ ] Decorated
+    - [ ] Metaclass
+    - [ ] Threaded
+  - [ ] Factory Pattern
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
 - [ ] Concurrency Design Patterns  
-
-Inspiration from [Omkar Pathak](https://github.com/OmkarPathak)
