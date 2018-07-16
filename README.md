@@ -7,14 +7,14 @@ Pydesignpatterns
 ### Todo
 
 - [ ] Creational Design Patterns  
-  - [x] Singleton Pattern
+  - [x] Singleton
     - [x] Naive
     - [x] Lazy instantiation
     - [x] Decorated
     - [x] Metaclass
     - [x] Threaded
-    - [x] **Example:** *[Singleton Counter](https://cdn.rawgit.com/avidLearnerInProgress/design-patterns/de4c8117/pydesignpatterns/creational/singleton_counter.py)*
-  - [x] Factory Pattern
+    - [x] **Example:** *[Counter](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_counter.py)*
+  - [x] FactoryMethod
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
 - [ ] Concurrency Design Patterns  
