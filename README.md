@@ -14,13 +14,13 @@ Pydesignpatterns
     - [x] [Metaclass](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_metaclass.py)
     - [x] [Threaded](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_thread.py)
     - [x] **Example:** *[Counter](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_counter.py)*
-  - [x] FactoryMethod
+  - [ ] FactoryMethod
     - [x] [Naive](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_naive.py)
     - [ ] **Examples:**
       - [x] *[Pizza](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_pizza.py)*
       - [x] *[Burger](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_burger.py)*
-      - [x] *[Hash]()*
-      - [x] *[Translator]()*
+      - [ ] *Hash*
+      - [ ] *Translator*
 
     
 - [ ] Structural Design Patterns  
