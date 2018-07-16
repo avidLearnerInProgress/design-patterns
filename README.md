@@ -13,6 +13,7 @@ Pydesignpatterns
     - [x] Decorated
     - [x] Metaclass
     - [x] Threaded
+    - [x] **Example:** *[Singleton Counter](https://cdn.rawgit.com/avidLearnerInProgress/design-patterns/de4c8117/pydesignpatterns/creational/singleton_counter.py)*
   - [x] Factory Pattern
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
