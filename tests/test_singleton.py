@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 7th July 2018
-Modified On: 14th July 2018
+Modified On: 16th July 2018
 """
 
 import unittest, sys, inspect
@@ -12,26 +12,27 @@ ROOT_DIR = str(Path(__file__).resolve().parent.parent)
 sys.path.append(ROOT_DIR)
 
 from pydesignpatterns.creational import (
-	singleton,
+	singleton_naive,
 	singleton_lazy_instantiation,
 	singleton_decorator,
 	singleton_thread,
-	singleton_metaclass
+	singleton_metaclass,
+	singleton_counter
 )
 
 class TestSingleton(unittest.TestCase):
 
 	def test_class(self):
-		self.assertEqual(inspect.isclass(singleton.Singleton), True)
+		self.assertEqual(inspect.isclass(singleton_naive.Singleton), True)
 
 	def test_instances(self):
-		s1, hs1 = singleton.Singleton()
-		s2, hs2 = singleton.Singleton()
+		s1, hs1 = singleton_naive.Singleton()
+		s2, hs2 = singleton_naive.Singleton()
 		self.assertEqual(id(s1), id(s2))
 	
 	def test_hashes(self):
-		s1, hs1 = singleton.Singleton()
-		s2, hs2 = singleton.Singleton()
+		s1, hs1 = singleton_naive.Singleton()
+		s2, hs2 = singleton_naive.Singleton()
 		self.assertEqual(hs1, hs2)
 
 class TestSingletonLazy(unittest.TestCase):
@@ -86,3 +87,19 @@ class TestSingletonMetaClass(unittest.TestCase):
 
 	def test_instances(self):
 		self.assertEqual(isinstance(singleton_metaclass.A, singleton_metaclass.SingletonMetaclass), isinstance(singleton_metaclass.B, singleton_metaclass.SingletonMetaclass))
+
+class TestSingletonCounter(unittest.TestCase):
+
+	def test_class(self):
+		self.assertEqual(inspect.isclass(singleton_counter.SingletonCounter), True)
+
+	def test_instances(self):
+		s1 = singleton_counter.SingletonCounter.get_instance()
+		s2 = singleton_counter.SingletonCounter.get_instance()
+		self.assertEqual(s1, s2)
+
+	def test_count(self):
+		s1 = singleton_counter.SingletonCounter.get_instance()
+		self.assertEqual(s1.get_count(), 1)
+		s2 = singleton_counter.SingletonCounter.get_instance()
+		self.assertEqual(s2.get_count(), 2)
