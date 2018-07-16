@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 15th July 2018
-Modified On: 16th July 2018
+Modified On: 17th July 2018
 """
 
 import unittest, sys, inspect
@@ -13,9 +13,38 @@ ROOT_DIR = str(Path(__file__).resolve().parent.parent)
 sys.path.append(ROOT_DIR)
 
 from pydesignpatterns.creational import (
+	factorymethod_naive,
 	factorymethod_pizza,
 	factorymethod_burger
 )
+
+class TestFactory(unittest.TestCase):
+
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(factorymethod_naive.AbstractProduct), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.ProductFactory), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.Product1), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.Product2), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.Client), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(factorymethod_naive.AbstractProduct, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_naive.Product1(), factorymethod_naive.AbstractProduct), True)
+		self.assertEqual(isinstance(factorymethod_naive.Product2(), factorymethod_naive.AbstractProduct), True)
+		
+	def test_orderedproduct(self):
+		factory = factorymethod_naive.ProductFactory()
+		store = factorymethod_naive.Client(factory)
+
+		product = store.order_product("product 1")
+		self.assertEqual(product.get_product(), "I am Product A")
+
+		product = store.order_product("product 2")
+		self.assertEqual(product.get_product(), "I am Product B")
+
+		product = store.order_product()
+		self.assertEqual(product.get_product(), "I am Product B")
+
 
 class TestFactoryPizza(unittest.TestCase):
 
