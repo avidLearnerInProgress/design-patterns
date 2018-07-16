@@ -7,13 +7,13 @@ Pydesignpatterns
 ### Todo
 
 - [ ] Creational Design Patterns  
-  - [ ] Singleton Pattern
-    - [ ] Naive
-    - [ ] Lazy instantiation
-    - [ ] Decorated
-    - [ ] Metaclass
-    - [ ] Threaded
-  - [ ] Factory Pattern
+  - [x] Singleton Pattern
+    - [x] Naive
+    - [x] Lazy instantiation
+    - [x] Decorated
+    - [x] Metaclass
+    - [x] Threaded
+  - [x] Factory Pattern
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
 - [ ] Concurrency Design Patterns  
