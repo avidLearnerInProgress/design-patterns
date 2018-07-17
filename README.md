@@ -14,15 +14,15 @@ Pydesignpatterns
     - [x] [Metaclass](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_metaclass.py)
     - [x] [Threaded](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_thread.py)
     - [x] **Example:** *[Counter](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_counter.py)*
-  - [ ] FactoryMethod
-    - [x] [Naive](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_naive.py)
-    - [ ] **Examples:**
-      - [x] *[Pizza](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_pizza.py)*
-      - [x] *[Burger](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_burger.py)*
-      - [ ] *Hash*
-      - [ ] *Translator*
+  - [x] Simple Factory
+    - [x] [Naive](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_naive.py)
+    - [x] **Examples:**
+      - [x] *[Pizza](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_pizza.py)*
+      - [x] *[Burger](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_burger.py)*
+  - [ ] Factory Method
+      - [ ] Naive
+      - [x] **Example:** *[Car]()*
 
-    
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
 - [ ] Concurrency Design Patterns  
