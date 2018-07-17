@@ -21,7 +21,7 @@ Pydesignpatterns
       - [x] *[Burger](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_burger.py)*
   - [ ] Factory Method
       - [ ] Naive
-      - [x] **Example:** *[Car]()*
+      - [x] **Example:** *[Car](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_car.py)*
 
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
