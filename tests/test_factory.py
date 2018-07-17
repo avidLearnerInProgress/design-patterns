@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 15th July 2018
-Modified On: 17th July 2018
+Modified On: 18th July 2018
 """
 
 import unittest, sys, inspect
@@ -15,7 +15,8 @@ sys.path.append(ROOT_DIR)
 from pydesignpatterns.creational import (
 	simplefactory_naive,
 	simplefactory_pizza,
-	simplefactory_burger
+	simplefactory_burger,
+	factorymethod_car
 )
 
 class TestFactory(unittest.TestCase):
@@ -110,3 +111,37 @@ class TestFactoryBurger(unittest.TestCase):
 
 		burger = store.order_burger()
 		self.assertEqual(burger.get_burgername(), "Mix Veggie")
+
+class TestFactoryCar(unittest.TestCase):
+
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(factorymethod_car.Car), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.TeslaX), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.TeslaS), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.Tesla3), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.BMWi3s), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.BMW7), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.CarFactory), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.TeslaFactory), True)
+		self.assertEqual(inspect.isclass(factorymethod_car.BMWFactory), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(factorymethod_car.Car, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_car.TeslaX(), factorymethod_car.Car), True)
+		self.assertEqual(isinstance(factorymethod_car.TeslaS(), factorymethod_car.Car), True)
+		self.assertEqual(isinstance(factorymethod_car.Tesla3(), factorymethod_car.Car), True)
+		self.assertEqual(isinstance(factorymethod_car.BMWi3s(), factorymethod_car.Car), True)
+		self.assertEqual(isinstance(factorymethod_car.BMW7(), factorymethod_car.Car), True)
+		self.assertEqual(isinstance(factorymethod_car.CarFactory, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_car.TeslaFactory(), factorymethod_car.CarFactory), True)
+		self.assertEqual(isinstance(factorymethod_car.BMWFactory(), factorymethod_car.CarFactory), True)
+
+	def test_orderedcar(self):
+		teslafactory = factorymethod_car.TeslaFactory()
+		bmwfactory = factorymethod_car.BMWFactory()
+
+		car1 = teslafactory.order_car("tesla x")
+		self.assertEqual(car1.get_carname(), "Tesla Model X")
+
+		car2 = bmwfactory.order_car("bmw i3s")
+		self.assertEqual(car2.get_carname(), "BMW i3s")
