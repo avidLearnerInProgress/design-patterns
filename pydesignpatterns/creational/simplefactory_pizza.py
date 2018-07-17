@@ -216,7 +216,7 @@ def get_classdiagram():
 	@return-values: matplotlib object with class diagram
 	"""
 
-	diagram = class_diagram("factorymethod.png")
+	diagram = class_diagram("simplefactory.png")
 	#plt.show()
 	return diagram
 
@@ -225,6 +225,6 @@ def get_outputimage():
 	@return-values: matplotlib object with code output
 	"""
 
-	output = output_image("factorymethod_pizza.png")
+	output = output_image("simplefactory_pizza.png")
 	#plt.show()
 	return output
