@@ -17,7 +17,8 @@ from pydesignpatterns.creational import (
 	simplefactory_pizza,
 	simplefactory_burger,
 	factorymethod_naive,
-	factorymethod_car
+	factorymethod_car,
+	factorymethod_cellphone
 )
 
 class TestFactory(unittest.TestCase):
@@ -167,3 +168,30 @@ class TestFactoryMethodCar(unittest.TestCase):
 
 		car2 = bmwfactory.order_car("bmw i3s")
 		self.assertEqual(car2.get_carname(), "BMW i3s")
+
+class TestFactoryMethodCellphone(unittest.TestCase):
+
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.Cellphone), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.SamsungGalaxyJ8), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.SamsungGalaxyA6), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.OppoF7), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.OppoF5), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.CellphoneFactory), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.SamsungFactory), True)
+		self.assertEqual(inspect.isclass(factorymethod_cellphone.OppoFactory), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(factorymethod_cellphone.Cellphone, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.SamsungGalaxyJ8(), factorymethod_cellphone.Cellphone), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.SamsungGalaxyA6(), factorymethod_cellphone.Cellphone), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.OppoF7(), factorymethod_cellphone.Cellphone), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.OppoF5(), factorymethod_cellphone.Cellphone), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.CellphoneFactory, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.SamsungFactory(), factorymethod_cellphone.CellphoneFactory), True)
+		self.assertEqual(isinstance(factorymethod_cellphone.OppoFactory(), factorymethod_cellphone.CellphoneFactory), True)
+
+	def test_orderedcellphone(self):
+		samsungfactory = factorymethod_cellphone.SamsungFactory()
+		c1 = samsungfactory.order_cellphone("J8")
+		self.assertEqual(c1.get_cellphonename(), "Samsung Galaxy J8")
