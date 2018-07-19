@@ -19,9 +19,11 @@ Pydesignpatterns
     - [x] **Examples:**
       - [x] *[Pizza](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_pizza.py)*
       - [x] *[Burger](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_burger.py)*
-  - [ ] Factory Method
-      - [ ] Naive
-      - [x] **Example:** *[Car](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_car.py)*
+  - [x] Factory Method
+    - [x] [Naive](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_naive.py)
+    - [x] **Examples:** 
+      - [x] *[Car](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_car.py)*
+      - [x] *[Cellphone](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_cellphone.py)*
 
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
