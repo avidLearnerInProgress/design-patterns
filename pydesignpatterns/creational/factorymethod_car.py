@@ -92,7 +92,7 @@ class Tesla3(Car):
 	"""
 
 	def __init__(self):
-		super(TeslaS, self).__init__()
+		super(Tesla3, self).__init__()
 		self._cname = "Tesla"
 		self._model = "Model 3"
 		self._type = "Electric"
