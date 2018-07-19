@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 15th July 2018
-Modified On: 18th July 2018
+Modified On: 19th July 2018
 """
 
 import unittest, sys, inspect
@@ -16,6 +16,7 @@ from pydesignpatterns.creational import (
 	simplefactory_naive,
 	simplefactory_pizza,
 	simplefactory_burger,
+	factorymethod_naive,
 	factorymethod_car
 )
 
@@ -45,7 +46,6 @@ class TestFactory(unittest.TestCase):
 
 		product = store.order_product()
 		self.assertEqual(product.get_product(), "I am Product B")
-
 
 class TestFactoryPizza(unittest.TestCase):
 
@@ -112,7 +112,29 @@ class TestFactoryBurger(unittest.TestCase):
 		burger = store.order_burger()
 		self.assertEqual(burger.get_burgername(), "Mix Veggie")
 
-class TestFactoryCar(unittest.TestCase):
+class TestFactoryMethodNaive(unittest.TestCase):
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(factorymethod_naive.AbstractCreator), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.ConcreteCreatorA), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.ConcreteCreatorB), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.AbstractProduct), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.ConcreteProductA), True)
+		self.assertEqual(inspect.isclass(factorymethod_naive.ConcreteProductB), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(factorymethod_naive.AbstractCreator, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_naive.ConcreteCreatorA(), factorymethod_naive.AbstractCreator), True)
+		self.assertEqual(isinstance(factorymethod_naive.ConcreteCreatorB(), factorymethod_naive.AbstractCreator), True)
+		self.assertEqual(isinstance(factorymethod_naive.AbstractProduct, ABCMeta), True)
+		self.assertEqual(isinstance(factorymethod_naive.ConcreteProductA(), factorymethod_naive.AbstractProduct), True)
+		self.assertEqual(isinstance(factorymethod_naive.ConcreteProductB(), factorymethod_naive.AbstractProduct), True)
+
+	def test_factorymethod(self):
+
+		concretecreator = factorymethod_naive.ConcreteCreatorA()
+		self.assertEqual(concretecreator.product.interface(), "I am in A")
+
+class TestFactoryMethodCar(unittest.TestCase):
 
 	def test_classes(self):
 		self.assertEqual(inspect.isclass(factorymethod_car.Car), True)
