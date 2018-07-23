@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 15th July 2018
-Modified On: 19th July 2018
+Modified On: 23th July 2018
 """
 
 import unittest, sys, inspect
@@ -18,7 +18,9 @@ from pydesignpatterns.creational import (
 	simplefactory_burger,
 	factorymethod_naive,
 	factorymethod_car,
-	factorymethod_cellphone
+	factorymethod_cellphone,
+	abstractfactory_shape,
+	abstractfactory_naive
 )
 
 class TestFactory(unittest.TestCase):
@@ -195,3 +197,59 @@ class TestFactoryMethodCellphone(unittest.TestCase):
 		samsungfactory = factorymethod_cellphone.SamsungFactory()
 		c1 = samsungfactory.order_cellphone("J8")
 		self.assertEqual(c1.get_cellphonename(), "Samsung Galaxy J8")
+
+class TestAbstractFactoryShape(unittest.TestCase):
+
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(abstractfactory_shape.DrawFactory), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.CircleFactory), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.TriangleFactory), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.CreateShape), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.FillShape), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.CircleShape), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.CircleColor), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.TriangleShape), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.TriangleColor), True)
+		self.assertEqual(inspect.isclass(abstractfactory_shape.ShapeFactoryStore), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(abstractfactory_shape.DrawFactory, ABCMeta), True)
+		self.assertEqual(isinstance(abstractfactory_shape.CircleFactory(), abstractfactory_shape.DrawFactory), True)
+		self.assertEqual(isinstance(abstractfactory_shape.TriangleFactory(), abstractfactory_shape.DrawFactory), True)
+		self.assertEqual(isinstance(abstractfactory_shape.CreateShape, ABCMeta), True)
+		self.assertEqual(isinstance(abstractfactory_shape.FillShape, ABCMeta), True)
+		self.assertEqual(isinstance(abstractfactory_shape.CircleShape(), abstractfactory_shape.CreateShape), True)
+		self.assertEqual(isinstance(abstractfactory_shape.CircleColor(), abstractfactory_shape.FillShape), True)
+		self.assertEqual(isinstance(abstractfactory_shape.TriangleShape(), abstractfactory_shape.CreateShape), True)
+		self.assertEqual(isinstance(abstractfactory_shape.TriangleColor(), abstractfactory_shape.FillShape), True)
+
+
+
+class TestAbstractFactoryShape(unittest.TestCase):
+
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(abstractfactory_naive.AbstractFactory), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.ConcreteFactory1), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.ConcreteFactory2), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.AbstractProductA), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.AbstractProductB), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.ConcreteProductA1), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.ConcreteProductA2), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.ConcreteProductB1), True)
+		self.assertEqual(inspect.isclass(abstractfactory_naive.ConcreteProductB2), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(abstractfactory_naive.AbstractFactory, ABCMeta), True)
+		self.assertEqual(isinstance(abstractfactory_naive.ConcreteFactory1(), abstractfactory_naive.AbstractFactory), True)
+		self.assertEqual(isinstance(abstractfactory_naive.ConcreteFactory2(), abstractfactory_naive.AbstractFactory), True)
+		self.assertEqual(isinstance(abstractfactory_naive.AbstractProductA, ABCMeta), True)
+		self.assertEqual(isinstance(abstractfactory_naive.AbstractProductB, ABCMeta), True)
+		self.assertEqual(isinstance(abstractfactory_naive.ConcreteProductA1(), abstractfactory_naive.AbstractProductA), True)
+		self.assertEqual(isinstance(abstractfactory_naive.ConcreteProductA2(), abstractfactory_naive.AbstractProductA), True)
+		self.assertEqual(isinstance(abstractfactory_naive.ConcreteProductB1(), abstractfactory_naive.AbstractProductB), True)
+		self.assertEqual(isinstance(abstractfactory_naive.ConcreteProductB2(), abstractfactory_naive.AbstractProductB), True)
+
+	def test_factory(self):
+		factory = abstractfactory_naive.ConcreteFactory1()
+		p_a = factory.create_product_a()
+		self.assertEqual(p_a.interface_a(), "I am in A1")
