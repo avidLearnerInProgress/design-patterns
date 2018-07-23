@@ -75,7 +75,7 @@ class CircleShape(CreateShape):
 	"""
 
 	def create(self):
-		print("Creating shape: " + type(self).__name__)
+		print("Creating circle shape using class: " + type(self).__name__)
 
 class CircleColor(FillShape):
 	"""
@@ -83,7 +83,7 @@ class CircleColor(FillShape):
 	"""
 
 	def fill(self, CreateShape):
-		print("Created, now filling shape: " + type(self).__name__)
+		print("Circle created, now filling shape using class: " + type(self).__name__)
 
 class TriangleShape(CreateShape):
 	"""
@@ -91,7 +91,7 @@ class TriangleShape(CreateShape):
 	"""
 
 	def create(self):
-		print("Creating shape: " + type(self).__name__)
+		print("Creating triangle shape using class: " + type(self).__name__)
 
 class TriangleColor(FillShape):
 	"""
@@ -99,7 +99,7 @@ class TriangleColor(FillShape):
 	"""
 
 	def fill(self, CreateShape):
-		print("Created, now filling shape: " + type(self).__name__)
+		print("Triangle created, now filling shape using class: " + type(self).__name__)
 
 
 class ShapeFactoryStore:
@@ -116,6 +116,21 @@ class ShapeFactoryStore:
 			self.fillshape = self.factory.fill_shape()
 			self.createshape.create()
 			self.fillshape.fill(self.createshape)
+
+	def make_circle(self):
+		self.factory = CircleFactory()
+		self.createshape = self.factory.create_shape()
+		self.fillshape = self.factory.fill_shape()
+		self.createshape.create()
+		self.fillshape.fill(self.createshape)
+
+	def make_triangle(self):
+		self.factory = TriangleFactory()
+		self.createshape = self.factory.create_shape()
+		self.fillshape = self.factory.fill_shape()
+		self.createshape.create()
+		self.fillshape.fill(self.createshape)
+
 
 def test_factory():
 	"""
@@ -139,8 +154,9 @@ def get_code():
 	g = inspect.getsource(CircleColor)
 	h = inspect.getsource(TriangleShape)
 	i = inspect.getsource(TriangleColor)
-	j = inspect.getsource(test_factory)
-	return a + '\n' + b + '\n' + c + '\n' + d + '\n' + e + '\n' + f + '\n' + g + '\n' + h + '\n' + i + '\n' + j
+	j = inspect.getsource(ShapeFactoryStore)
+	k = inspect.getsource(test_factory)
+	return a + '\n' + b + '\n' + c + '\n' + d + '\n' + e + '\n' + f + '\n' + g + '\n' + h + '\n' + i + '\n' + j + '\n' + k
 
 def get_classdiagram():
 	"""
@@ -148,7 +164,7 @@ def get_classdiagram():
 	"""
 
 	diagram = class_diagram("abstractfactory.png")
-	plt.show()
+	#plt.show()
 	return diagram
 
 def get_outputimage():
@@ -157,7 +173,5 @@ def get_outputimage():
 	"""
 
 	output = output_image("abstractfactory_shape.png")
-	plt.show()
+	#plt.show()
 	return output
-
-print(get_code())
