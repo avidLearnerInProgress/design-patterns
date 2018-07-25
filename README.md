@@ -27,8 +27,10 @@ Pydesignpatterns
   - [x] Abstract Factory
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/abstractfactory_naive.py)
     - [x] **Example:** *[Shape](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/abstractfactory_shape.py)*
-
-
+  - [ ] Builder
+    - [ ] Generic
+    - [x] **Example:** *[Aircraft]()*
+    
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
 - [ ] Concurrency Design Patterns  
