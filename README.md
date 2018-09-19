@@ -21,16 +21,19 @@ Pydesignpatterns
       - [x] *[Burger](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/simplefactory_burger.py)*
   - [x] Factory Method
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_naive.py)
-    - [x] **Examples:** 
+    - [x] **Examples:**
       - [x] *[Car](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_car.py)*
       - [x] *[Cellphone](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/factorymethod_cellphone.py)*
   - [x] Abstract Factory
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/abstractfactory_naive.py)
     - [x] **Example:** *[Shape](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/abstractfactory_shape.py)*
-  - [ ] Builder
+  - [x] Builder
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/builder_naive.py)
     - [x] **Example:** *[Aircraft](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/builder_aircraft.py)*
-    
+  - [ ] Prototype
+    - [ ] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/builder_naive.py)
+    - [x] **Example:** *[Shape](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/prototype_shape.py)*
+
 - [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
 - [ ] Concurrency Design Patterns  
