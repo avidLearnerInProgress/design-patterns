@@ -136,7 +136,7 @@ def test_factory():
 	"""
 	Demonstration of abstract factory pattern
 	"""
-	
+
 	shape = ShapeFactoryStore()
 	shape.make_shape()
 
@@ -144,7 +144,7 @@ def get_code():
 	"""
 	@return-values: source code
 	"""
-	
+
 	a = inspect.getsource(DrawFactory)
 	b = inspect.getsource(CircleFactory)
 	c = inspect.getsource(TriangleFactory)
