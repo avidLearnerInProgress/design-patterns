@@ -142,5 +142,3 @@ def get_outputimage():
 	output = output_image("prototype_shape.png")
 	plt.show()
 	return output
-
-test_prototype()

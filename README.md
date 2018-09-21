@@ -30,8 +30,8 @@ Pydesignpatterns
   - [x] Builder
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/builder_naive.py)
     - [x] **Example:** *[Aircraft](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/builder_aircraft.py)*
-  - [ ] Prototype
-    - [ ] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/builder_naive.py)
+  - [x] Prototype
+    - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/prototype_naive.py)
     - [x] **Example:** *[Shape](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/prototype_shape.py)*
 
 - [ ] Structural Design Patterns  
