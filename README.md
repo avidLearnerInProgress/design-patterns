@@ -6,7 +6,7 @@ Pydesignpatterns
 
 ### Todo
 
-- [ ] Creational Design Patterns  
+- [x] Creational Design Patterns  
   - [x] Singleton
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_naive.py)
     - [x] [Lazy instantiation](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/singleton_lazy_instantiation.py)
