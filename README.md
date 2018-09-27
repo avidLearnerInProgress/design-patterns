@@ -4,7 +4,7 @@ Pydesignpatterns
 
 ## Python module to learn all design patterns on the go!  
 
-## Inspired by [Omkar Pathak's](https://github.com/OmkarPathak/) [pygorithm](https://github.com/OmkarPathak/pygorithm)
+#### Inspired by [Omkar Pathak's](https://github.com/OmkarPathak/) [pygorithm](https://github.com/OmkarPathak/pygorithm)
 
 ### Todo
 
