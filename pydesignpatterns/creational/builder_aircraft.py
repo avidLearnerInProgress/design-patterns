@@ -122,19 +122,19 @@ class AircraftDirector:
 		self._builder.build_model()
 		return self._builder.aircraft
 
+def get_custom_fields_str(obj):
+		return '\n'.join('{}: {}'.format(field, obj.__getattribute__(field)) for field in dir(obj) if not field.startswith('__'))
+
 def test_builder():
 	"""
 	Demonstration of builder pattern
 	"""
 
-	def get_custom_fields_str(obj):
-		return '\n'.join('{}: {}'.format(field, obj.__getattribute__(field)) for field in dir(obj) if not field.startswith('__'))
-
 	aircraft_builder = Airbus380Builder()
 	aircraft_builder.create_aircraft()
 	aircraft_director = AircraftDirector()
 	aircraft = aircraft_director.build(aircraft_builder)
-	print(get_custom_fields_str(aircraft))
+	#print(get_custom_fields_str(aircraft))
 
 def get_code():
 	"""
@@ -166,3 +166,5 @@ def get_outputimage():
 	output = output_image("builder_aircraft.png")
 	plt.show()
 	return output
+
+test_builder()

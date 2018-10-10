@@ -223,9 +223,7 @@ class TestAbstractFactoryShape(unittest.TestCase):
 		self.assertEqual(isinstance(abstractfactory_shape.TriangleShape(), abstractfactory_shape.CreateShape), True)
 		self.assertEqual(isinstance(abstractfactory_shape.TriangleColor(), abstractfactory_shape.FillShape), True)
 
-
-
-class TestAbstractFactoryShape(unittest.TestCase):
+class TestAbstractFactoryNaiveShape(unittest.TestCase):
 
 	def test_classes(self):
 		self.assertEqual(inspect.isclass(abstractfactory_naive.AbstractFactory), True)
