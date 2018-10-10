@@ -6,9 +6,6 @@ Pydesignpatterns
 
 #### Inspired by [Omkar Pathak's](https://github.com/OmkarPathak/) [pygorithm](https://github.com/OmkarPathak/pygorithm)
 
-Busy with preparation of PyCon talks and google interview.
-Will start updating the repo from next week!
-
 ### Todo
 
 - [x] Creational Design Patterns  
