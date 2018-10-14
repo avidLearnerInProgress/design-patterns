@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 18th September 2018
-Modified On: 10th October 2018
+Modified On: 14th October 2018
 """
 
 import inspect, sys
@@ -112,5 +112,4 @@ def get_outputimage():
 	plt.show()
 	return output
 
-#get_outputimage()
-#print(get_code())
+test_builder()

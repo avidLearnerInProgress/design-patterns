@@ -1,7 +1,7 @@
 """
 Author: CHIRAG SHAH
 Created On: 10th October 2018
-Modified On: 10th October 2018
+Modified On: 14th October 2018
 """
 
 import unittest, sys, inspect
@@ -16,6 +16,25 @@ from pydesignpatterns.creational import (
 	builder_aircraft,
 	builder_naive
 )
+
+class TestBuilder(unittest.TestCase):
+
+	def test_classes(self):
+		self.assertEqual(inspect.isclass(builder_naive.Director), True)
+		self.assertEqual(inspect.isclass(builder_naive.Product), True)
+		self.assertEqual(inspect.isclass(builder_naive.Builder), True)
+		self.assertEqual(inspect.isclass(builder_naive.ConcreteBuilder), True)
+
+	def test_instances(self):
+		self.assertEqual(isinstance(builder_naive.ConcreteBuilder(), builder_naive.Builder), True)
+		self.assertEqual(isinstance(builder_naive.Builder, ABCMeta), True)
+
+	def test_builder(self):
+		concrete_builder = builder_naive.ConcreteBuilder()
+		director = builder_naive.Director()	
+		director.construct(concrete_builder)
+		product = concrete_builder.product
+		#Unable to identify any assertion condition for product. Let me know if anyone finds :)
 
 class TestBuilderAircraft(unittest.TestCase):
 
