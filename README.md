@@ -36,6 +36,11 @@ Pydesignpatterns
     - [x] [Generic](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/prototype_naive.py)
     - [x] **Example:** *[Shape](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/creational/prototype_shape.py)*
 
-- [ ] Structural Design Patterns  
 - [ ] Behavioral Design Patterns  
+  - [ ] Chain Of Responsibility
+    - [ ] [Generic]()
+    - [x] **Example:** *[Planet](https://github.com/avidLearnerInProgress/design-patterns/blob/master/pydesignpatterns/behavioral/chain_of_responsibility_planet.py)*
+  
+
+- [ ] Structural Design Patterns  
 - [ ] Concurrency Design Patterns  
